@@ -1,0 +1,29 @@
+scalar Upload
+
+type Query {
+    prueba: String,
+}
+
+type Mutation {
+    signup(data: UserCreateInput!): Auth
+}
+
+type Auth {
+    token: String
+    message: String
+}
+
+input UserCreateInput {
+    first_name: String!
+    last_name: String!
+    email: String!
+    password: String!
+    birth_date: String
+    gender: GENDER
+    profile_image: Upload
+}
+
+enum GENDER {
+    Male
+    Female
+}
