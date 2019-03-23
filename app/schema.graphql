@@ -1,11 +1,13 @@
 scalar Upload
 
 type Query {
-    prueba: String,
+    prueba: String
 }
 
 type Mutation {
     signup(data: UserCreateInput!): Auth
+    login(email: String!, password: String!) : Auth,
+
 }
 
 type Auth {
@@ -20,7 +22,7 @@ input UserCreateInput {
     password: String!
     birth_date: String
     gender: GENDER
-    profile_image: Upload
+    #profile_image: Upload
 }
 
 enum GENDER {

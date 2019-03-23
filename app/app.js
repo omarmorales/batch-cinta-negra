@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 // conecta a los modelos de mongoose
 const resolvers = require("./resolvers");
 const typeDefs = importSchema('./app/schema.graphql');
-const { db } = require ("../config/index");
+const { db } = require ("./config");
 
 mongoose.connect(db.url, {
     useCreateIndex: true,
